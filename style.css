@@ -26,3 +26,25 @@
     text-align: right;
     vertical-align: middle;
 }
+
+/*波線*/
+.wavyline{
+    display:inline-block;
+    text-decoration: underline wavy;
+
+}
+
+/*改行なし*/
+.nowrap{
+    white-space: nowrap;
+}
+
+/*メイリオ*/
+p{
+    font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+}
+
+/*MSPゴシック*/
+h2{
+    font-family:"ＭＳ Ｐゴシック", "MS PGothic";
+}
