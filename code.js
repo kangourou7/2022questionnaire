@@ -171,10 +171,18 @@ function YesNo(ele){
     if(yesBtn == true){
         yesQs.style.display = "block";
         noQs.style.display = "none";
+        for(i=0;i<yesQsName.length;i++){
+            var target = document.getElementsByName(yesQsName[i])
+            for(j=0;j<target.length;j++){
+                //target[j].checked = false;
+                target[j].required = true;
+            }
+        }
         for(i=0;i<noQsName.length;i++){
             var target = document.getElementsByName(noQsName[i])
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
+                target[j].required = false;
             }
         }
     }
@@ -187,6 +195,14 @@ function YesNo(ele){
             var target = document.getElementsByName(yesQsName[i])
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
+                target[j].required = false;
+            }
+        }
+        for(i=0;i<noQsName.length;i++){
+            var target = document.getElementsByName(noQsName[i])
+            for(j=0;j<target.length;j++){
+                //target[j].checked = false;
+                target[j].required = true;
             }
         }
     }
@@ -199,12 +215,14 @@ function YesNo(ele){
             var target = document.getElementsByName(noQsName[i])
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
+                target[j].required = false;
             }
         }
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
+                target[j].required = false;
             }
         }
     }
