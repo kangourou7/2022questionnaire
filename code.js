@@ -169,6 +169,7 @@ function YesNo(ele){
     var noQs = document.getElementById(noQsId);
     //alert(yesQs)
     if(yesBtn == true){
+        alert("yes")
         yesQs.style.display = "block";
         noQs.style.display = "none";
         for(i=0;i<yesQsName.length;i++){
@@ -187,10 +188,10 @@ function YesNo(ele){
         }
     }
     else if(noBtn == true){
-        //alert(yesQs)
+        alert("no")
         yesQs.style.display = "none";
         noQs.style.display = "block";
-        //alert("aaa")
+        alert("aaa")
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
             for(j=0;j<target.length;j++){
@@ -207,6 +208,7 @@ function YesNo(ele){
         }
     }
     else if(wakaranBtn == true){
+        alert("wakaran")
         yesQs.style.display = "none";
         noQs.style.display = "none";
         yesQs.checked = false;
