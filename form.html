@@ -62,7 +62,7 @@ name="EmailForm" id="form1">
 
 
 <p><b>8．あなたのチームで行っているスポーツ種目はどれですか。</b></p>
-　<select name="entry.1526945642" required>
+　<select id="08001" name="entry.1526945642" required onchange="q08001(this)">
     <option hidden>選択してください</option>
     <option value="アイスホッケー">アイスホッケー</option>
     <option value="アメリカンフットボール">アメリカンフットボール</option>
@@ -115,7 +115,9 @@ name="EmailForm" id="form1">
     <option value="レスリング">レスリング</option>
     <option value="その他">その他</option>
 </select>
-<p>　その他（具体的に記入：<input type="text" name="entry.1526945642">）</p>
+<span id="0800s" style="display:none">
+（具体的に記入：<input type="text" id="0800st" name="entry.1526945642">）</p>
+</span>
 <!--
 <p>　<input type="radio" id="08001" name="entry.1526945642" value="アメリカンフットボール" required><label for="08001">アメリカンフットボール</label></p>
 <p>　<input type="radio" id="08002" name="entry.1526945642" value="空手道"><label for="08002">空手道</label></p>

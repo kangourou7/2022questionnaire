@@ -273,4 +273,15 @@ document.getElementById("form1").onkeypress = (e) => {
       // アクションを行わない
       e.preventDefault();
     }
-  }
+}
+
+// q8で「具体的に」を表示
+function q08001(ele){
+    var selected = document.getElementById("08001").value
+    if(selected == "その他"){
+        document.getElementById("0800s").style.display = "inline";
+    }else{
+        document.getElementById("0800s").style.display = "none";
+        document.getElementById("0800st").value = "";
+    }
+}
