@@ -1,5 +1,7 @@
 .table{
     display: table;
+    table-layout: fixed;
+    width: 100%;
 }
 
 .table .row{
@@ -12,9 +14,18 @@
     text-align: left;
     vertical-align: middle;
     padding: 0.5em;
+    width:50%;
 }
 
 .table .cellC{
+    display: table-cell;
+    border: 1px solid #000000;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.5em;
+}
+
+.table .cellCw{
     display: table-cell;
     border: 1px solid #000000;
     text-align: center;
@@ -26,6 +37,14 @@
     display: table-cell;
     border: 1px solid #000000;
     text-align: right;
+    vertical-align: middle;
+    padding: 0.5em;
+}
+
+.table .cellJ{
+    display: table-cell;
+    border: 1px solid #000000;
+    text-align-last: justify;
     vertical-align: middle;
     padding: 0.5em;
 }

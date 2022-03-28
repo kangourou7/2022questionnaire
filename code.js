@@ -169,7 +169,7 @@ function YesNo(ele){
     var noQs = document.getElementById(noQsId);
     //alert(yesQs)
     if(yesBtn == true){
-        alert("yes")
+        //alert("yes")
         yesQs.style.display = "block";
         noQs.style.display = "none";
         for(i=0;i<yesQsName.length;i++){
@@ -188,10 +188,10 @@ function YesNo(ele){
         }
     }
     else if(noBtn == true){
-        alert("no")
+        //alert("no")
         yesQs.style.display = "none";
         noQs.style.display = "block";
-        alert("aaa")
+        //alert("aaa")
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
             for(j=0;j<target.length;j++){
@@ -208,7 +208,7 @@ function YesNo(ele){
         }
     }
     else if(wakaranBtn == true){
-        alert("wakaran")
+        //alert("wakaran")
         yesQs.style.display = "none";
         noQs.style.display = "none";
         yesQs.checked = false;
@@ -243,7 +243,41 @@ function q30(ele){
     }
 }
 
-//（わからない）（その他）クリア
+//（わからない）（その他）クリア【ラジオボタン】
+function tClear(ele){
+    var checkedId = ele.id;
+    var wId = checkedId.charAt(0) + checkedId.charAt(1) + checkedId.charAt(2) + checkedId.charAt(3) + "w";
+    var wtId = wId + "t";
+    var sId = checkedId.charAt(0) + checkedId.charAt(1) + checkedId.charAt(2) + checkedId.charAt(3) + "s";
+    var stId = sId + "t";
+
+    var wORs = checkedId.charAt(4)
+    if(wORs != "w" && wORs != "s"){
+        if(document.getElementById(stId)){
+            document.getElementById(stId).value = "";
+        }else if(document.getElementById(wtId)){
+            document.getElementById(wtId).value = "";
+        }
+    }else if(wORs = "w"){
+        document.getElementById(stId).value = "";
+    }else if(wORs = "s"){
+        document.getElementById(wtId).value = "";
+    }
+}
+
+//（わからない）（その他）クリア【チェックボックス】
+function checkClear(ele){
+    var checkedId = ele.id;
+    var wsId = checkedId.charAt(0) + checkedId.charAt(1) + checkedId.charAt(2) + checkedId.charAt(3) + checkedId.charAt(4);
+    var wstId = wsId + "t";
+    if(document.getElementById(checkedId).checked == false){
+        if(document.getElementById(wstId)){
+            document.getElementById(wstId).value = "";
+        }
+    }
+}
+
+/*
 function tClear(ele){
     var checkedId = ele.id;
     var wId = checkedId.charAt(0) + checkedId.charAt(1) + checkedId.charAt(2) + checkedId.charAt(3) + "w";
@@ -261,8 +295,17 @@ function tClear(ele){
         document.getElementById(stId).disabled = true;
     }else if(document.getElementById(sId).checked == true){
         document.getElementById(stId).disabled = false;
-    }    
+    }
 }
+*/
+
+//「具体的に記入」入力時に「その他」「わからない」チェック
+function gCheck(ele){
+    var checkedId = ele.id;
+    var gId = checkedId.charAt(0) + checkedId.charAt(1) + checkedId.charAt(2) + checkedId.charAt(3) + checkedId.charAt(4);
+    document.getElementById(gId).checked = true
+}
+
 
 // Enterキーが押された時にSubmitされるのを抑制する
 document.getElementById("form1").onkeypress = (e) => {
