@@ -44,6 +44,7 @@
 .table .cellJ{
     display: table-cell;
     border: 1px solid #000000;
+    text-align: justify;
     text-align-last: justify;
     vertical-align: middle;
     padding: 0.5em;
