@@ -170,17 +170,19 @@ function YesNo(ele){
     //alert(yesQs)
     if(yesBtn == true){
         //alert("yes")
-        yesQs.style.display = "block";
-        noQs.style.display = "none";
+        //yesQs.style.display = "block";
+        //noQs.style.display = "none";
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
+            //target.required = true;
             for(j=0;j<target.length;j++){
                 //target[j].checked = false;
-                target[j].required = true;
+                //target[j].required = true;
             }
         }
         for(i=0;i<noQsName.length;i++){
             var target = document.getElementsByName(noQsName[i])
+            //target.required = false;
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
                 target[j].required = false;
@@ -189,11 +191,12 @@ function YesNo(ele){
     }
     else if(noBtn == true){
         //alert("no")
-        yesQs.style.display = "none";
-        noQs.style.display = "block";
+        //yesQs.style.display = "none";
+        //noQs.style.display = "block";
         //alert("aaa")
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
+            //target.required = false;
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
                 target[j].required = false;
@@ -201,20 +204,22 @@ function YesNo(ele){
         }
         for(i=0;i<noQsName.length;i++){
             var target = document.getElementsByName(noQsName[i])
+            //target.required = true;
             for(j=0;j<target.length;j++){
                 //target[j].checked = false;
-                target[j].required = true;
+                //target[j].required = true;
             }
         }
     }
     else if(wakaranBtn == true){
         //alert("wakaran")
-        yesQs.style.display = "none";
-        noQs.style.display = "none";
+        //yesQs.style.display = "none";
+        //noQs.style.display = "none";
         yesQs.checked = false;
         noQs.checked = false;
         for(i=0;i<noQsName.length;i++){
             var target = document.getElementsByName(noQsName[i])
+            //target.required = false;
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
                 target[j].required = false;
@@ -222,6 +227,7 @@ function YesNo(ele){
         }
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
+            //target.required = false;
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
                 target[j].required = false;
@@ -255,13 +261,17 @@ function tClear(ele){
     if(wORs != "w" && wORs != "s"){
         if(document.getElementById(stId)){
             document.getElementById(stId).value = "";
+            document.getElementById(stId).required = false;
         }else if(document.getElementById(wtId)){
             document.getElementById(wtId).value = "";
+            document.getElementById(wtId).required = false;
         }
     }else if(wORs = "w"){
         document.getElementById(stId).value = "";
+        document.getElementById(stId).required = false;
     }else if(wORs = "s"){
         document.getElementById(wtId).value = "";
+        document.getElementById(wtId).required = false;
     }
 }
 
@@ -328,3 +338,25 @@ function q08001(ele){
         document.getElementById("0800st").value = "";
     }
 }
+
+/*
+//チェックボックス（11・13・16・18・20・22）必須化
+function isCheck(ele){
+    var checkedId = ele.id;
+    var checkQs = [q1100_Name,q1300_Name,q1600_Name,q1800_Name,q2000_Name,q2200_Name]
+    var qNo = checkedId.charAt(0) + checkedId.charAt(1);
+    for(i=0;i<checkQs.length;i++){
+        var checkBoxes = document.getElementsByName(checkQs[i])
+        var count = 0;
+        for(j=0;j<checkBoxes.length;j++){
+            if(document.getElementsByName(checkBoxes[j]).checked == false){
+                count++;
+            }
+        }
+        if(count > 0){
+            msg += "問" + qNo + "、";
+        }
+    }
+    alert(msg + "に回答してください。")
+}
+*/

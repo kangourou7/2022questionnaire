@@ -34,7 +34,7 @@ name="EmailForm" id="form1">
 <p>　<input type="radio" id="03003" name="entry.130758380" value="混合"><label for="03003">混合</label></p>
 
 <p><b>4．あなたのチームに所属している選手の数を記入してください。</b></p>
-<p>　<input type="tel" id="04001" name="entry.76824352" required><label for="04001">人</label></p>
+<p>　<input type="number" id="04001" name="entry.76824352" required><label for="04001">人</label></p>
 
 
 <p><b>5．あなたのチームの<u class="wavyline">過去3年間における</u>競技レベルはどれですか。</b></p>
@@ -47,7 +47,7 @@ name="EmailForm" id="form1">
 <p><b>6．あなたのチームの<u class="wavyline">1日当たりの</u>練習時間を記入してください。</b></p>
 <p>　※長期休暇やオフシーズンを除いた1日当たりの平均練習時間をお答えください。</p>
 <p>　※練習には、戦術・技術練習、フィジカルトレーニングなど身体活動を伴うものは全て含みます。</p>
-<p>　<input type="tel" id="06001" name="entry.1532289689" required><label for="06001">時間</label></p>
+<p>　<input type="number" id="06001" name="entry.1532289689" required><label for="06001">時間</label></p>
 
 
 <p><b>7．あなたのチームの<u class="wavyline">1週間当たりの</u>練習日数はどのぐらいですか。</b></p>
@@ -149,7 +149,7 @@ name="EmailForm" id="form1">
 <span id="0900no">
 <!--質問9で「いいえ」と回答した場合-->
 <p><b>10．あなたのチームは今後、<u class="wavyline">試合中</u>に発生するケガを記録することを考えていますか。</b></p>
-<p>　<input type="radio" id="10001" name="entry.1912228487" onchange="tClear(this)" value="はい" required><label for="10001">はい</label></p>
+<p>　<input type="radio" id="10001" name="entry.1912228487" onchange="tClear(this)" value="はい"><label for="10001">はい</label></p>
 <p>　<input type="radio" id="10002" name="entry.1912228487" onchange="tClear(this)" value="いいえ"><label for="10002">いいえ</label></p>
 <p>　<input type="radio" id="1000w" name="entry.1912228487" onchange="tClear(this)" value="（わからない）"><label for="1000w">わからない（具体的に記入：<input type="text" id="1000wt" name="entry.1912228487" onclick="gCheck(this)">）</label></p>
 </span>
@@ -159,7 +159,7 @@ name="EmailForm" id="form1">
 <!--質問9で「はい」と回答した場合-->
 <p><b>11．あなたのチームの中で誰が<u class="wavyline">試合中</u>に発生するケガを記録していますか。</b></p>
 <p>　※当てはまるもの全てを選択してください。</p>
-<p>　<input type="checkbox" id="11001" name="entry.1373016093" value="選手からの自己申告" required><label for="11001">選手からの自己申告</label></p>
+<p>　<input type="checkbox" id="11001" name="entry.1373016093" value="選手からの自己申告"><label for="11001">選手からの自己申告</label></p>
 <p>　<input type="checkbox" id="11002" name="entry.1373016093" value="大学生のスタッフ（例：学生トレーナー、学生コーチ）"><label for="11002">大学生のスタッフ（例：学生トレーナー、学生コーチ）</label></p>
 <p>　<input type="checkbox" id="11003" name="entry.1373016093" value="医師（社会人もしくは大学院生）"><label for="11003">医師（社会人もしくは大学院生）</label></p>
 <p>　<input type="checkbox" id="11004" name="entry.1373016093" value="トレーナー（社会人もしくは大学院生）"><label for="11004">トレーナー（社会人もしくは大学院生）</label></p>
@@ -169,7 +169,7 @@ name="EmailForm" id="form1">
 
 <!--質問9で「はい」と回答した場合-->
 <p><b>12．記録した<u class="wavyline">試合中</u>のケガの情報をどのぐらいの頻度でまとめていますか。</b></p>
-<p>　<input type="radio" id="12001" name="entry.1921329787" onchange="tClear(this)" value="日ごと" required><label for="12001">日ごと</label></p>
+<p>　<input type="radio" id="12001" name="entry.1921329787" onchange="tClear(this)" value="日ごと"><label for="12001">日ごと</label></p>
 <p>　<input type="radio" id="12002" name="entry.1921329787" onchange="tClear(this)" value="週ごと"><label for="12002">週ごと</label></p>
 <p>　<input type="radio" id="12003" name="entry.1921329787" onchange="tClear(this)" value="月ごと"><label for="12003">月ごと</label></p>
 <p>　<input type="radio" id="12004" name="entry.1921329787" onchange="tClear(this)" value="年（または1シーズン）ごと"><label for="12004">年（または1シーズン）ごと</label></p>
@@ -179,7 +179,7 @@ name="EmailForm" id="form1">
 <!--質問9で「はい」と回答した場合-->
 <p><b>13．誰が<u class="wavyline">試合中</u>に発生したケガの情報をまとめていますか。</b></p>
 <p>　※当てはまるもの全てを選択してください。</p>
-<p>　<input type="checkbox" id="13001" name="entry.2143339229" value="選手自身" required><label for="13001">選手自身</label></p>
+<p>　<input type="checkbox" id="13001" name="entry.2143339229" value="選手自身"><label for="13001">選手自身</label></p>
 <p>　<input type="checkbox" id="13002" name="entry.2143339229" value="大学生のスタッフ（例：学生トレーナー、学生コーチ）"><label for="13002">大学生のスタッフ（例：学生トレーナー、学生コーチ）</label></p>
 <p>　<input type="checkbox" id="13003" name="entry.2143339229" value="医師（社会人もしくは大学院生）"><label for="13003">医師（社会人もしくは大学院生）</label></p>
 <p>　<input type="checkbox" id="13004" name="entry.2143339229" value="トレーナー（社会人もしくは大学院生）"><label for="13004">トレーナー（社会人もしくは大学院生）</label></p>
@@ -196,7 +196,7 @@ name="EmailForm" id="form1">
 <span id="1400no">
 <!--質問14で「いいえ」と回答した場合-->
 <p><b>15．あなたのチームは今後、<u class="wavyline">練習中</u>に発生するケガを記録することを考えていますか。</u></b></p>
-<p>　<input type="radio" id="15001" name="entry.1307366704" onchange="tClear(this)" value="はい" required><label for="15001">はい</label></p>
+<p>　<input type="radio" id="15001" name="entry.1307366704" onchange="tClear(this)" value="はい"><label for="15001">はい</label></p>
 <p>　<input type="radio" id="15002" name="entry.1307366704" onchange="tClear(this)" value="いいえ"><label for="15002">いいえ</label></p>
 <p>　<input type="radio" id="1500w" name="entry.1307366704" onchange="tClear(this)" value="（わからない）"><label for="1500w">わからない（具体的に記入：<input type="text" id="1500wt" name="entry.1307366704" onclick="gCheck(this)">）</label></p>
 </span>
@@ -205,7 +205,7 @@ name="EmailForm" id="form1">
 <!--質問14で「はい」と回答した場合-->
 <p><b>16．あなたのチームの中で誰が<u class="wavyline">練習中</u>に発生するケガを記録していますか。</b></p>
 <p>　※当てはまるもの全てを選択してください。</p>
-<p>　<input type="checkbox" id="16001" name="entry.364753067" value="選手からの自己申告" required><label for="16001">選手からの自己申告</label></p>
+<p>　<input type="checkbox" id="16001" name="entry.364753067" value="選手からの自己申告"><label for="16001">選手からの自己申告</label></p>
 <p>　<input type="checkbox" id="16002" name="entry.364753067" value="大学生のスタッフ（例：学生トレーナー、学生コーチ）"><label for="16002">大学生のスタッフ（例：学生トレーナー、学生コーチ）</label></p>
 <p>　<input type="checkbox" id="16003" name="entry.364753067" value="医師（社会人もしくは大学院生）"><label for="16003">医師（社会人もしくは大学院生）</label></p>
 <p>　<input type="checkbox" id="16004" name="entry.364753067" value="トレーナー（社会人もしくは大学院生）"><label for="16004">トレーナー（社会人もしくは大学院生）</label></p>
@@ -215,7 +215,7 @@ name="EmailForm" id="form1">
 
 <!--質問14で「はい」と回答した場合-->
 <p><b>17．記録した<u class="wavyline">練習中</u>のケガの情報をどのぐらいの頻度でまとめていますか。</b></p>
-<p>　<input type="radio" id="17001" name="entry.1567367990" onchange="tClear(this)" value="日ごと" required><label for="17001">日ごと</label></p>
+<p>　<input type="radio" id="17001" name="entry.1567367990" onchange="tClear(this)" value="日ごと"><label for="17001">日ごと</label></p>
 <p>　<input type="radio" id="17002" name="entry.1567367990" onchange="tClear(this)" value="週ごと"><label for="17002">週ごと</label></p>
 <p>　<input type="radio" id="17003" name="entry.1567367990" onchange="tClear(this)" value="月ごと"><label for="17003">月ごと</label></p>
 <p>　<input type="radio" id="17004" name="entry.1567367990" onchange="tClear(this)" value="年（または1シーズン）ごと"><label for="17004">年（または1シーズン）ごと</label></p>
@@ -225,7 +225,7 @@ name="EmailForm" id="form1">
 <!--質問14で「はい」と回答した場合-->
 <p><b>18．誰が<u class="wavyline">練習中</u>に発生したケガの情報をまとめていますか。</b></p>
 <p>　※当てはまるもの全てを選択してください。</p>
-<p>　<input type="checkbox" id="18001" name="entry.36840026" value="選手自身" required><label for="18001">選手自身</label></p>
+<p>　<input type="checkbox" id="18001" name="entry.36840026" value="選手自身"><label for="18001">選手自身</label></p>
 <p>　<input type="checkbox" id="18002" name="entry.36840026" value="大学生のスタッフ（例：学生トレーナー、学生コーチ）"><label for="18002">大学生のスタッフ（例：学生トレーナー、学生コーチ）</label></p>
 <p>　<input type="checkbox" id="18003" name="entry.36840026" value="医師（社会人もしくは大学院生）"><label for="18003">医師（社会人もしくは大学院生）</label></p>
 <p>　<input type="checkbox" id="18004" name="entry.36840026" value="トレーナー（社会人もしくは大学院生）"><label for="18004">トレーナー（社会人もしくは大学院生）</label></p>
@@ -246,7 +246,7 @@ name="EmailForm" id="form1">
 <!--質問19で「はい」と回答した場合-->
 <p><b>20．調査フォームを用いてどのような方法でケガを記録していますか。</b></p>
 <p>　※当てはまるもの全てを選択してください。</p>
-<p>　<input type="checkbox" id="20001" name="entry.1140198498" value="電子媒体（例：アプリケーション、エクセル、Google フォーム）を使用して記録" required><label for="20001">電子媒体（例：アプリケーション、エクセル、Google フォーム）を使用して記録</label></p>
+<p>　<input type="checkbox" id="20001" name="entry.1140198498" value="電子媒体（例：アプリケーション、エクセル、Google フォーム）を使用して記録"><label for="20001">電子媒体（例：アプリケーション、エクセル、Google フォーム）を使用して記録</label></p>
 <p>　<input type="checkbox" id="20002" name="entry.1140198498" value="紙を使用して記録"><label for="20002">紙を使用して記録</label></p>
 <p>　<input type="checkbox" id="2000s" name="entry.1140198498" onchange="checkClear(this)" value="（その他）"><label for="2000s">その他（具体的に記入：<input type="text" id="2000st" name="entry.1140198498" onclick="gCheck(this)">）</label></p>
 <p>　<input type="checkbox" id="2000w" name="entry.1140198498" onchange="checkClear(this)" value="（わからない）"><label for="2000w">わからない（具体的に記入：<input type="text" id="2000wt" name="entry.1140198498" onclick="gCheck(this)">）</label></p>
@@ -274,7 +274,7 @@ name="EmailForm" id="form1">
             <p>1）受傷した選手の個人識別情報（例：氏名、ID）</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21011" name="entry.848158956" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21011" name="entry.848158956" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21012" name="entry.848158956" onchange="tClear(this)" value="含まれない">
@@ -289,7 +289,7 @@ name="EmailForm" id="form1">
             <p>2）受傷日</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21021" name="entry.1450093137" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21021" name="entry.1450093137" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21022" name="entry.1450093137" onchange="tClear(this)" value="含まれない">
@@ -304,7 +304,7 @@ name="EmailForm" id="form1">
             <p>3）受傷時間</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21031" name="entry.2109641383" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21031" name="entry.2109641383" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21032" name="entry.2109641383" onchange="tClear(this)" value="含まれない">
@@ -319,7 +319,7 @@ name="EmailForm" id="form1">
             <p>4）受傷時の活動（例：試合、練習）</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21041" name="entry.143211267" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21041" name="entry.143211267" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21042" name="entry.143211267" onchange="tClear(this)" value="含まれない">
@@ -334,7 +334,7 @@ name="EmailForm" id="form1">
             <p>5）受傷場所（例：屋外コート、体育館）</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21051" name="entry.161345526" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21051" name="entry.161345526" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21052" name="entry.161345526" onchange="tClear(this)" value="含まれない">
@@ -349,7 +349,7 @@ name="EmailForm" id="form1">
             <p>6）受傷（発症）様式（例：急性・突発性、慢性）</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21061" name="entry.610234784" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21061" name="entry.610234784" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21062" name="entry.610234784" onchange="tClear(this)" value="含まれない">
@@ -364,7 +364,7 @@ name="EmailForm" id="form1">
             <p>7）受傷機転（例：相手選手との接触）</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21071" name="entry.703959160" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21071" name="entry.703959160" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21072" name="entry.703959160" onchange="tClear(this)" value="含まれない">
@@ -379,7 +379,7 @@ name="EmailForm" id="form1">
             <p>8）防具装着の有無（例：ヘルメット、マウスガード）</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21081" name="entry.225873728" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21081" name="entry.225873728" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21082" name="entry.225873728" onchange="tClear(this)" value="含まれない">
@@ -394,7 +394,7 @@ name="EmailForm" id="form1">
             <p>9）受傷歴（例：新たな受傷、再受傷）</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21091" name="entry.1052260797" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21091" name="entry.1052260797" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21092" name="entry.1052260797" onchange="tClear(this)" value="含まれない">
@@ -409,7 +409,7 @@ name="EmailForm" id="form1">
             <p>10）受傷部位</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21101" name="entry.986771553" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21101" name="entry.986771553" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21102" name="entry.986771553" onchange="tClear(this)" value="含まれない">
@@ -424,7 +424,7 @@ name="EmailForm" id="form1">
             <p>11）受傷したケガの種類（例：捻挫、骨折）</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21111" name="entry.992443041" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21111" name="entry.992443041" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21112" name="entry.992443041" onchange="tClear(this)" value="含まれない">
@@ -439,7 +439,7 @@ name="EmailForm" id="form1">
             <p>12）受傷したケガの重症度</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21121" name="entry.1435453234" onchange="YesNo(this);tClear(this)" value="含まれる" required>
+            <input type="radio" id="21121" name="entry.1435453234" onchange="YesNo(this);tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21122" name="entry.1435453234" onchange="YesNo(this);tClear(this)" value="含まれない">
@@ -454,7 +454,7 @@ name="EmailForm" id="form1">
             <p>13）受傷側（例：左、右、両側）</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21131" name="entry.2025236233" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21131" name="entry.2025236233" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21132" name="entry.2025236233" onchange="tClear(this)" value="含まれない">
@@ -469,7 +469,7 @@ name="EmailForm" id="form1">
             <p>14）受傷時の天候</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21141" name="entry.222011874" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21141" name="entry.222011874" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21142" name="entry.222011874" onchange="tClear(this)" value="含まれない">
@@ -484,7 +484,7 @@ name="EmailForm" id="form1">
             <p>15）受傷後の処置（例：応急処置、病院への受診）</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21151" name="entry.1589964351" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21151" name="entry.1589964351" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21152" name="entry.1589964351" onchange="tClear(this)" value="含まれない">
@@ -499,7 +499,7 @@ name="EmailForm" id="form1">
             <p>16）競技復帰日</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21161" name="entry.822947387" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21161" name="entry.822947387" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21162" name="entry.822947387" onchange="tClear(this)" value="含まれない">
@@ -514,7 +514,7 @@ name="EmailForm" id="form1">
             <p>17）競技離脱期間</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21171" name="entry.1828273273" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21171" name="entry.1828273273" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21172" name="entry.1828273273" onchange="tClear(this)" value="含まれない">
@@ -529,7 +529,7 @@ name="EmailForm" id="form1">
             <p>18）追加事項を記入するための自由記述</p>
         </div>
         <div class="cellCw">
-            <input type="radio" id="21181" name="entry.708614092" onchange="tClear(this)" value="含まれる" required>
+            <input type="radio" id="21181" name="entry.708614092" onchange="tClear(this)" value="含まれる">
         </div>
         <div class="cellCw">
             <input type="radio" id="21182" name="entry.708614092" onchange="tClear(this)" value="含まれない">
@@ -544,7 +544,7 @@ name="EmailForm" id="form1">
 <!--質問19で「はい」と回答した場合-->
 <p><b>22．ケガの調査フォームに含まれる情報はどのように決定していますか。</b></p>
 <p>　※当てはまるもの全てを選択してください。</p>
-<p>　<input type="checkbox" id="22001" name="entry.272757457" value="ケガの調査方法に関する共同声明（国際オリンピック委員会や、サッカーなどの各競技団体から出ているケガの調査に関する共同声明）を参考に決定" required><label for="22001">ケガの調査方法に関する共同声明（国際オリンピック委員会や、サッカーなどの各競技団体から出ているケガの調査に関する共同声明）を参考に決定</label></p>
+<p>　<input type="checkbox" id="22001" name="entry.272757457" value="ケガの調査方法に関する共同声明（国際オリンピック委員会や、サッカーなどの各競技団体から出ているケガの調査に関する共同声明）を参考に決定"><label for="22001">ケガの調査方法に関する共同声明（国際オリンピック委員会や、サッカーなどの各競技団体から出ているケガの調査に関する共同声明）を参考に決定</label></p>
 <p>　<input type="checkbox" id="22002" name="entry.272757457" value="ケガを調査した先行研究を参考に決定"><label for="22002">ケガを調査した先行研究を参考に決定</label></p>
 <p>　<input type="checkbox" id="22003" name="entry.272757457" value="協会や競技団体の情報を参考に決定"><label for="22003">協会や競技団体の情報を参考に決定</label></p>
 <p>　<input type="checkbox" id="22004" name="entry.272757457" value="チーム独自の情報にて決定"><label for="22004">チーム独自の情報にて決定</label></p>
@@ -557,7 +557,7 @@ name="EmailForm" id="form1">
 <span id="2112yes">
 <!--質問21の12）受傷したケガの重症度で「含まれる」と回答した場合-->
 <p><b>23．ケガの重症度をどのように定義していますか。</b></p>
-<p>　<input type="radio" id="23001" name="entry.1371248371" onchange="tClear(this)" value="受傷した選手が練習や試合に参加できなかった期間で評価" required><label for="23001">受傷した選手が練習や試合に参加できなかった期間で評価</label></p>
+<p>　<input type="radio" id="23001" name="entry.1371248371" onchange="tClear(this)" value="受傷した選手が練習や試合に参加できなかった期間で評価"><label for="23001">受傷した選手が練習や試合に参加できなかった期間で評価</label></p>
 <p>　<input type="radio" id="23002" name="entry.1371248371" onchange="tClear(this)" value="医師の診断に基づく評価"><label for="23002">医師の診断に基づく評価</label></p>
 <p>　<input type="radio" id="23003" name="entry.1371248371" onchange="tClear(this)" value="手術の有無に基づく評価"><label for="23003">手術の有無に基づく評価</label></p>
 <p>　<input type="radio" id="23004" name="entry.1371248371" onchange="tClear(this)" value="メディカルスタッフが必要とする治療の期間で評価"><label for="23004">メディカルスタッフが必要とする治療の期間で評価</label></p>
@@ -1168,7 +1168,7 @@ name="EmailForm" id="form1">
 <center>
 
 <p>
-<input type="submit" value="送信する">
+<input type="submit" value="送信する" onclick="isCheck(this)">
 </p>
 
 </center>
