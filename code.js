@@ -151,13 +151,13 @@ function YesNo(ele){
 
     //alert(qId)
     if(qId == "0900"){
-        var yesQsName = [q1100_Name,q1200_Name,q1300_Name]
+        var yesQsName = [q1200_Name]
         var noQsName = [q1000_Name]
     }else if(qId == "1400"){
-        var yesQsName = [q1600_Name,q1700_Name]
+        var yesQsName = [q1700_Name]
         var noQsName = [q1500_Name]
     }else if(qId == "1900"){
-        var yesQsName = [q2000_Name,q2101_Name,q2102_Name,q2103_Name,q2104_Name,q2105_Name,q2106_Name,q2107_Name,q2108_Name,q2109_Name,q2110_Name,q2111_Name,q2112_Name,q2113_Name,q2114_Name,q2115_Name,q2116_Name,q2117_Name,q2118_Name,q2200_Name,q2300_Name]
+        var yesQsName = [q2101_Name,q2102_Name,q2103_Name,q2104_Name,q2105_Name,q2106_Name,q2107_Name,q2108_Name,q2109_Name,q2110_Name,q2111_Name,q2112_Name,q2113_Name,q2114_Name,q2115_Name,q2116_Name,q2117_Name,q2118_Name,q2300_Name]
         var noQsName = ""
     }else if(qId == "2112"){
         var yesQsName = [q2300_Name]
@@ -170,14 +170,14 @@ function YesNo(ele){
     //alert(yesQs)
     if(yesBtn == true){
         //alert("yes")
-        //yesQs.style.display = "block";
-        //noQs.style.display = "none";
+        yesQs.style.display = "block";
+        noQs.style.display = "none";
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
             //target.required = true;
             for(j=0;j<target.length;j++){
-                //target[j].checked = false;
-                //target[j].required = true;
+                target[j].checked = false;
+                target[j].required = true;
             }
         }
         for(i=0;i<noQsName.length;i++){
@@ -191,8 +191,8 @@ function YesNo(ele){
     }
     else if(noBtn == true){
         //alert("no")
-        //yesQs.style.display = "none";
-        //noQs.style.display = "block";
+        yesQs.style.display = "none";
+        noQs.style.display = "block";
         //alert("aaa")
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
@@ -206,15 +206,15 @@ function YesNo(ele){
             var target = document.getElementsByName(noQsName[i])
             //target.required = true;
             for(j=0;j<target.length;j++){
-                //target[j].checked = false;
-                //target[j].required = true;
+                target[j].checked = false;
+                target[j].required = true;
             }
         }
     }
     else if(wakaranBtn == true){
         //alert("wakaran")
-        //yesQs.style.display = "none";
-        //noQs.style.display = "none";
+        yesQs.style.display = "none";
+        noQs.style.display = "none";
         yesQs.checked = false;
         noQs.checked = false;
         for(i=0;i<noQsName.length;i++){
@@ -339,12 +339,51 @@ function q08001(ele){
     }
 }
 
-/*
+
 //チェックボックス（11・13・16・18・20・22）必須化
-function isCheck(ele){
-    var checkedId = ele.id;
+function isCheck(){
+    //var checkedId = ele.id;
+    var checkId = ["0900","1400","1900"]
     var checkQs = [q1100_Name,q1300_Name,q1600_Name,q1800_Name,q2000_Name,q2200_Name]
-    var qNo = checkedId.charAt(0) + checkedId.charAt(1);
+    var checkQsNum = ["11","13","16","18","20","22"]
+    var count = 0;
+    var msg = "";
+    for(i=0;i<checkId.length;i++){
+        var yesId = checkId[i] + "1";
+        //var noId = checkId[i] + "2";
+        //var wakaranId = checkId[i] + "3";
+        if(document.getElementById(yesId).checked == true){
+            var checkBoxes = document.getElementsByName(checkQs[i*2])
+            count = 0;
+            for(j=0;j<checkBoxes.length;j++){
+                if(checkBoxes[j].checked == true){
+                    count++;
+                }
+            }
+            if(count==0){
+                msg += checkQsNum[i*2] + "、";
+            }
+
+            var checkBoxes = document.getElementsByName(checkQs[i*2+1])
+            count = 0;
+            for(j=0;j<checkBoxes.length;j++){
+                if(checkBoxes[j].checked == true){
+                    count++;
+                }
+            }
+            if(count==0){
+                msg += checkQsNum[i*2+1] + "、"
+            }
+        }
+    }
+    if(msg != ""){
+        alert("質問" + msg + "に回答してください。")
+        return false;
+    }
+}
+
+/*
+    qNo = checkedId.charAt(0) + checkedId.charAt(1);
     for(i=0;i<checkQs.length;i++){
         var checkBoxes = document.getElementsByName(checkQs[i])
         var count = 0;
@@ -358,5 +397,4 @@ function isCheck(ele){
         }
     }
     alert(msg + "に回答してください。")
-}
 */
