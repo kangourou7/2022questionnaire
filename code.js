@@ -28,8 +28,10 @@ var q2115_Name = "entry.1589964351"
 var q2116_Name = "entry.822947387"
 var q2117_Name = "entry.1828273273"
 var q2118_Name = "entry.708614092"
+var q2119_Name = "entry.504266363"
 var q2200_Name = "entry.272757457"
 var q2300_Name = "entry.1371248371"
+var q2400_Name = "entry.321943382"
 
 /*
 var q9targetY = [q11_Name,q12_Name,q13_Name]
@@ -152,15 +154,18 @@ function YesNo(ele){
     //alert(qId)
     if(qId == "0900"){
         var yesQsName = [q1200_Name]
+        var yesQsNameC = [q1100_Name,q1300_Name]
         var noQsName = [q1000_Name]
     }else if(qId == "1400"){
         var yesQsName = [q1700_Name]
+        var yesQsNameC = [q1600_Name,q1800_Name]
         var noQsName = [q1500_Name]
     }else if(qId == "1900"){
-        var yesQsName = [q2101_Name,q2102_Name,q2103_Name,q2104_Name,q2105_Name,q2106_Name,q2107_Name,q2108_Name,q2109_Name,q2110_Name,q2111_Name,q2112_Name,q2113_Name,q2114_Name,q2115_Name,q2116_Name,q2117_Name,q2118_Name,q2300_Name]
+        var yesQsName = [q2101_Name,q2102_Name,q2103_Name,q2104_Name,q2105_Name,q2106_Name,q2107_Name,q2108_Name,q2109_Name,q2110_Name,q2111_Name,q2112_Name,q2113_Name,q2114_Name,q2115_Name,q2116_Name,q2117_Name,q2118_Name,q2119_Name]
+        var yesQsNameC = [q2000_Name,q2200_Name]
         var noQsName = ""
     }else if(qId == "2112"){
-        var yesQsName = [q2300_Name]
+        var yesQsName = ""
         var noQsName = ""
     }
     //alert(yesQsName)
@@ -174,10 +179,15 @@ function YesNo(ele){
         noQs.style.display = "none";
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
-            //target.required = true;
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
+                target[j].value = "";
                 target[j].required = true;
+            }
+            var targetC = document.getElementsByName(yesQsNameC[i])
+            for(j=0;j<targetC.length;j++){
+                targetC[j].checked = false;
+                targetC[j].value = "";
             }
         }
         for(i=0;i<noQsName.length;i++){
@@ -185,6 +195,7 @@ function YesNo(ele){
             //target.required = false;
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
+                target[j].value = "";
                 target[j].required = false;
             }
         }
@@ -196,10 +207,15 @@ function YesNo(ele){
         //alert("aaa")
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
-            //target.required = false;
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
+                target[j].value = "";
                 target[j].required = false;
+            }
+            var targetC = document.getElementsByName(yesQsNameC[i])
+            for(j=0;j<targetC.length;j++){
+                targetC[j].checked = false;
+                targetC[j].value = "";
             }
         }
         for(i=0;i<noQsName.length;i++){
@@ -207,6 +223,7 @@ function YesNo(ele){
             //target.required = true;
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
+                target[j].value = "";
                 target[j].required = true;
             }
         }
@@ -219,18 +236,23 @@ function YesNo(ele){
         noQs.checked = false;
         for(i=0;i<noQsName.length;i++){
             var target = document.getElementsByName(noQsName[i])
-            //target.required = false;
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
+                target[j].value = "";
                 target[j].required = false;
             }
         }
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
-            //target.required = false;
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
+                target[j].value = "";
                 target[j].required = false;
+            }
+            var targetC = document.getElementsByName(yesQsNameC[i])
+            for(j=0;j<targetC.length;j++){
+                targetC[j].checked = false;
+                targetC[j].value = "";
             }
         }
     }
@@ -258,20 +280,27 @@ function tClear(ele){
     var stId = sId + "t";
 
     var wORs = checkedId.charAt(4)
-    if(wORs != "w" && wORs != "s"){
+    if(wORs == "w"){
+        document.getElementById(wtId).required = true;
         if(document.getElementById(stId)){
             document.getElementById(stId).value = "";
             document.getElementById(stId).required = false;
-        }else if(document.getElementById(wtId)){
+        }
+    }else if(wORs == "s"){
+        document.getElementById(stId).required = true;
+        if(document.getElementById(wtId)){
+            document.getElementById(wtId).value = "";
+            document.getElementById(wtId).required = false;            
+        }
+    }else{
+        if(document.getElementById(stId)){
+            document.getElementById(stId).value = "";
+            document.getElementById(stId).required = false;
+        }
+        if(document.getElementById(wtId)){
             document.getElementById(wtId).value = "";
             document.getElementById(wtId).required = false;
         }
-    }else if(wORs = "w"){
-        document.getElementById(stId).value = "";
-        document.getElementById(stId).required = false;
-    }else if(wORs = "s"){
-        document.getElementById(wtId).value = "";
-        document.getElementById(wtId).required = false;
     }
 }
 
@@ -280,10 +309,11 @@ function checkClear(ele){
     var checkedId = ele.id;
     var wsId = checkedId.charAt(0) + checkedId.charAt(1) + checkedId.charAt(2) + checkedId.charAt(3) + checkedId.charAt(4);
     var wstId = wsId + "t";
-    if(document.getElementById(checkedId).checked == false){
-        if(document.getElementById(wstId)){
-            document.getElementById(wstId).value = "";
-        }
+    if(document.getElementById(wsId).checked == true){
+        document.getElementById(wstId).required = true;
+    }else if(document.getElementById(wsId).checked == false){
+        document.getElementById(wstId).required = false;
+        document.getElementById(wstId).value = "";
     }
 }
 
@@ -316,7 +346,7 @@ function gCheck(ele){
     document.getElementById(gId).checked = true
 }
 
-
+/*
 // Enterキーが押された時にSubmitされるのを抑制する
 document.getElementById("form1").onkeypress = (e) => {
     // form1に入力されたキーを取得
@@ -327,6 +357,7 @@ document.getElementById("form1").onkeypress = (e) => {
       e.preventDefault();
     }
 }
+*/
 
 // q8で「具体的に」を表示
 function q08001(ele){
@@ -340,12 +371,12 @@ function q08001(ele){
 }
 
 
-//チェックボックス（11・13・16・18・20・22）必須化
+//チェックボックス（11・13・16・18・20・22・23・＋24）必須化
 function isCheck(){
     //var checkedId = ele.id;
-    var checkId = ["0900","1400","1900"]
-    var checkQs = [q1100_Name,q1300_Name,q1600_Name,q1800_Name,q2000_Name,q2200_Name]
-    var checkQsNum = ["11","13","16","18","20","22"]
+    var checkId = ["0900","1400","1900","2112"]
+    var checkQs = [q1100_Name,q1300_Name,q1600_Name,q1800_Name,q2000_Name,q2200_Name,q2300_Name]
+    var checkQsNum = ["11","13","16","18","20","22","23"]
     var count = 0;
     var msg = "";
     for(i=0;i<checkId.length;i++){
@@ -361,21 +392,45 @@ function isCheck(){
                 }
             }
             if(count==0){
-                msg += checkQsNum[i*2] + "、";
+                if(msg != ""){
+                    msg += "、"
+                }
+                msg += checkQsNum[i*2];
             }
 
-            var checkBoxes = document.getElementsByName(checkQs[i*2+1])
-            count = 0;
-            for(j=0;j<checkBoxes.length;j++){
-                if(checkBoxes[j].checked == true){
-                    count++;
+            if(checkId[i] != "2112"){
+                var checkBoxes = document.getElementsByName(checkQs[i*2+1])
+                count = 0;
+                for(j=0;j<checkBoxes.length;j++){
+                    if(checkBoxes[j].checked == true){
+                        count++;
+                    }
+                }
+                if(count==0){
+                    if(msg != ""){
+                        msg += "、"
+                    }
+                    msg += checkQsNum[i*2+1];
                 }
             }
-            if(count==0){
-                msg += checkQsNum[i*2+1] + "、"
-            }
+            
         }
     }
+    //24のみ必須化
+    var checkBoxes = document.getElementsByName(q2400_Name)
+    count = 0;
+    for(j=0;j<checkBoxes.length;j++){
+        if(checkBoxes[j].checked == true){
+            count++;
+        }
+    }
+    if(count==0){
+        if(msg != ""){
+            msg += "、"
+        }
+        msg += "24";
+    }
+
     if(msg != ""){
         alert("質問" + msg + "に回答してください。")
         return false;
@@ -397,4 +452,17 @@ function isCheck(){
         }
     }
     alert(msg + "に回答してください。")
+*/
+
+/*
+//「具体的に記入」必須化
+function reqGutai(ele){
+    var checkedId = ele.id;
+    var gId = checkedId.charAt(0) + checkedId.charAt(1) + checkedId.charAt(2) + checkedId.charAt(3) + "s" + "t";
+    if(document.getElementById(ele.id).checked == true){
+        document.getElementById(gId).required = true;
+    }else if(document.getElementById(ele.id).checked == false){
+        document.getElementById(gId).required = false;
+    }
+}
 */
