@@ -346,7 +346,7 @@ function gCheck(ele){
     document.getElementById(gId).checked = true
 }
 
-/*
+
 // Enterキーが押された時にSubmitされるのを抑制する
 document.getElementById("form1").onkeypress = (e) => {
     // form1に入力されたキーを取得
@@ -357,7 +357,7 @@ document.getElementById("form1").onkeypress = (e) => {
       e.preventDefault();
     }
 }
-*/
+
 
 // q8で「具体的に」を表示
 function q08001(ele){
