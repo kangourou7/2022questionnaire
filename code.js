@@ -468,25 +468,30 @@ function reqGutai(ele){
 */
 
 //正の整数のみ入力可能にする
-function numChk04(ele){
+function numChk04(){
     var inputValue = document.getElementById("04001").value;
-    var inputValue1st = inputValue.charAt(0);
-    var inputNum = Number(inputValue);
-    if(isNaN(inputValue1st) || Number.isInteger(inputNum) == false || inputNum < 1){
+    //var inputValue1st = inputValue.charAt(0);
+    var inputNum = inputValue * 1;
+    if(Number.isInteger(inputNum) == false || inputNum < 1){
         alert("正の整数以外は入力できません。");
         document.getElementById("04001").value = "";
+        document.getElementById("04001").focus();
+        return;
+    }else{
+        document.getElementById("04001").value = inputNum;
     }
 }
 
 //正の数のみ入力可能にする
 function numChk06(ele){
     var inputValue = document.getElementById("06001").value;
-    var inputValue1st = inputValue.charAt(0);
-    var inputNum = Number(inputValue);
-    if(isNaN(inputValue1st) || isNaN(inputNum) || inputNum < 0){
+    var inputNum = inputValue * 1;
+    if(isNaN(inputNum) || inputNum < 0){
         alert("正の数以外は入力できません。");
         document.getElementById("06001").value = "";
         document.getElementById("06001").focus();
+    }else{
+        document.getElementById("06001").value = inputNum;
     }
 }
 
