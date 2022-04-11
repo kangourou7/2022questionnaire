@@ -466,3 +466,86 @@ function reqGutai(ele){
     }
 }
 */
+
+//正の整数のみ入力可能にする
+function numChk04(ele){
+    var inputValue = document.getElementById("04001").value;
+    var inputNum = Number(inputValue);
+    if(Number.isInteger(inputNum) == false || inputNum < 1){
+        alert("正の整数以外は入力できません。");
+        document.getElementById("04001").value = "";
+    }
+}
+
+//正の数のみ入力可能にする
+function numChk06(ele){
+    var inputValue = document.getElementById("06001").value;
+    var inputNum = Number(inputValue);
+    if(isNaN(inputNum) || inputNum < 0){
+        alert("正の数以外は入力できません。");
+        document.getElementById("06001").value = "";
+    }
+}
+
+
+
+/*
+function NaN_check1(str){
+    var wstr = str.value;
+    if(isNaN(wstr)){
+    alert("半角数字以外入力不可です。");
+    }
+}
+
+
+
+// ━━━━━━━━━━━━━━━━
+// 数字チェック
+// 数字、-、.以外有はtrue（true時エラー）
+// ━━━━━━━━━━━━━━━━
+function num_check2(str){
+	var ok = true;
+	var wresult = "";
+	var wcheck = true;
+	var wnum = str.value;
+	wresult = /[^\d-.]/.test(wnum);
+	if (wresult){
+		ok=false;
+		setTimeout(function(){str.focus();}, 0);
+		alert("半角数字以外入力不可です。");
+//***マイナス、小数入力不可の場合、以降不要***
+	} else {
+		if (wcheck){
+// .（小数点）の入力有無チェック
+			wresult = /[.]+/.test(wnum);
+			if (wresult){
+// .（小数点）のフォーマットチェック
+				wcheck=point_check(wnum);
+			}
+		}
+		if (!wcheck){
+			setTimeout(function(){str.focus();}, 0);
+		}
+	}
+	return(ok);
+}
+// ━━━━━━━━━━━━━━━━
+// .（小数点）の数、位置チェック
+// ━━━━━━━━━━━━━━━━
+function point_check(str){
+	var ok = true;
+	var wresult = "";
+	wresult = str.match(/[.]/g).length;
+	if (wresult>1){
+		ok=false;
+		alert(".（小数点）が複数入力されています。");
+	} else {
+		wresult = /[.]$/.test(str);
+		if (wresult){
+			ok=false;
+			alert(".（小数点）の位置が不正です。");
+		}
+	}
+	return(ok);
+}
+*/
