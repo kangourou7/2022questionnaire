@@ -23,7 +23,7 @@
 <p>　※複数の役割がある方は主な役割を選択してください。</p>
 <p>　<input type="radio" id="02001" name="entry.2084437242" onchange="tClear(this)" value="メディカルスタッフ（例：医師、トレーナー）※コンディショニングに関わっている方" required><label for="02001">メディカルスタッフ（例：医師、トレーナー）※コンディショニングに関わっている方</label></p>
 <p>　<input type="radio" id="02002" name="entry.2084437242" onchange="tClear(this)" value="コーチングスタッフ（例：監督、コーチ）※競技の技術や戦術を指導している方"><label for="02002">コーチングスタッフ（例：監督、コーチ）※競技の技術や戦術を指導している方</label></p>
-<p>　<input type="radio" id="0200s" name="entry.2084437242" onchange="tClear(this)" value="（その他）"><label for="0200s">その他（具体的に記入：<input type="text" id="0200st" name="entry.2084437242" onclick="gCheck(this)">）</label></p>
+<p>　<input type="radio" id="0200s" name="entry.2084437242" onchange="tClear(this)" value="（その他）"><label for="0200s">その他（具体的に記入：<input type="text" id="0200st" name="entry.2084437242" onblur="gCheck(this)">）</label></p>
 
 <p><b>3．あなたのチームの性別はどれですか。</b></p>
 <p>　<input type="radio" id="03001" name="entry.130758380" value="男子" required><label for="03001">男子</label></p>
@@ -45,7 +45,7 @@
 <p><b>6．あなたのチームの<u>1日当たりの</u>練習時間を入力してください。</b></p>
 <p>　※長期休暇やオフシーズンを除いた1日当たりの平均練習時間をお答えください。</p>
 <p>　※練習には、戦術・技術練習、フィジカルトレーニングなど身体活動を伴うものは全て含みます。</p>
-<p>　<input type="tel" id="06001" name="entry.1532289689" min="0" onchange="numChk06(this)" required><label for="06001">時間</label></p>
+<p>　<input type="text" id="06001" name="entry.1532289689" min="0" onchange="numChk06(this)" required><label for="06001">時間</label></p>
 
 
 <p><b>7．あなたのチームの<u>1週間当たりの</u>練習日数はどれですか。</b></p>
@@ -145,7 +145,7 @@
 <p>　※練習中に発生するケガについては、質問14以降でお聞きします。</p>
 <p>　<input type="radio" id="09001" name="entry.1189262394" onchange="YesNo(this);tClear(this)" value="はい" required><label for="09001">はい</label></p>
 <p>　<input type="radio" id="09002" name="entry.1189262394" onchange="YesNo(this);tClear(this)" value="いいえ"><label for="09002">いいえ</label></p>
-<p>　<input type="radio" id="0900w" name="entry.1189262394" onchange="YesNo(this);tClear(this)" value="（わからない）"><label for="0900w">わからない（具体的に記入：<input type="text" id="0900wt" name="entry.1189262394" onclick="gCheck(this);tClear(this)">）</label></p>
+<p>　<input type="radio" id="0900w" name="entry.1189262394" onchange="YesNo(this);tClear(this)" value="（わからない）"><label for="0900w">わからない（具体的に記入：<input type="text" id="0900wt" name="entry.1189262394" onblur="gCheck(this);tClear(this)">）</label></p>
 
 
 <span id="0900no">
@@ -153,7 +153,7 @@
 <p><b>10．あなたのチームは今後、<u>試合中</u>に発生するケガを記録することを考えていますか。</b></p>
 <p>　<input type="radio" id="10001" name="entry.1912228487" onchange="tClear(this)" value="はい" required><label for="10001">はい</label></p>
 <p>　<input type="radio" id="10002" name="entry.1912228487" onchange="tClear(this)" value="いいえ"><label for="10002">いいえ</label></p>
-<p>　<input type="radio" id="1000w" name="entry.1912228487" onchange="tClear(this)" value="（わからない）"><label for="1000w">わからない（具体的に記入：<input type="text" id="1000wt" name="entry.1912228487" onclick="gCheck(this);tClear(this)">）</label></p>
+<p>　<input type="radio" id="1000w" name="entry.1912228487" onchange="tClear(this)" value="（わからない）"><label for="1000w">わからない（具体的に記入：<input type="text" id="1000wt" name="entry.1912228487" onblur="gCheck(this);tClear(this)">）</label></p>
 </span>
 
 
@@ -166,8 +166,8 @@
 <p>　<input type="checkbox" id="11003" name="entry.1373016093" value="医師（社会人もしくは大学院生）"><label for="11003">医師（社会人もしくは大学院生）</label></p>
 <p>　<input type="checkbox" id="11004" name="entry.1373016093" value="トレーナー（社会人もしくは大学院生）"><label for="11004">トレーナー（社会人もしくは大学院生）</label></p>
 <p>　<input type="checkbox" id="11005" name="entry.1373016093" value="コーチングスタッフ（例：監督、コーチ）（社会人もしくは大学院生）"><label for="11005">コーチングスタッフ（例：監督、コーチ）（社会人もしくは大学院生）</label></p>
-<p>　<input type="checkbox" id="1100s" name="entry.1373016093" onchange="checkClear(this)" value="（その他）"><label for="1100s">その他（具体的に記入：<input type="text" id="1100st" name="entry.1373016093" onclick="gCheck(this);checkClear(this)">）</label></p>
-<p>　<input type="checkbox" id="1100w" name="entry.1373016093" onchange="checkClear(this)" value="（わからない）"><label for="1100w">わからない（具体的に記入：<input type="text" id="1100wt" name="entry.1373016093" onclick="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="1100s" name="entry.1373016093" onchange="checkClear(this)" value="（その他）"><label for="1100s">その他（具体的に記入：<input type="text" id="1100st" name="entry.1373016093" onblur="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="1100w" name="entry.1373016093" onchange="checkClear(this)" value="（わからない）"><label for="1100w">わからない（具体的に記入：<input type="text" id="1100wt" name="entry.1373016093" onblur="gCheck(this);checkClear(this)">）</label></p>
 
 <!--質問9で「はい」と回答した場合-->
 <p><b>12．記録した<u>試合中</u>のケガの情報をどのぐらいの頻度でまとめていますか。</b></p>
@@ -177,7 +177,7 @@
 <p>　<input type="radio" id="12003" name="entry.1921329787" onchange="tClear(this)" value="月ごと"><label for="12003">月ごと</label></p>
 <p>　<input type="radio" id="12004" name="entry.1921329787" onchange="tClear(this)" value="年（または1シーズン）ごと"><label for="12004">年（または1シーズン）ごと</label></p>
 <p>　<input type="radio" id="12005" name="entry.1921329787" onchange="tClear(this)" value="不定期"><label for="12005">不定期</label></p>
-<p>　<input type="radio" id="1200s" name="entry.1921329787" onchange="tClear(this)" value="（その他）"><label for="1200s">その他（具体的に記入：<input type="text" id="1200st" name="entry.1921329787" onclick="gCheck(this);tClear(this)">）</label></p>
+<p>　<input type="radio" id="1200s" name="entry.1921329787" onchange="tClear(this)" value="（その他）"><label for="1200s">その他（具体的に記入：<input type="text" id="1200st" name="entry.1921329787" onblur="gCheck(this);tClear(this)">）</label></p>
 
 <!--質問9で「はい」と回答した場合-->
 <p><b>13．誰が<u>試合中</u>に発生したケガの情報をまとめていますか。</b></p>
@@ -188,21 +188,21 @@
 <p>　<input type="checkbox" id="13003" name="entry.2143339229" value="医師（社会人もしくは大学院生）"><label for="13003">医師（社会人もしくは大学院生）</label></p>
 <p>　<input type="checkbox" id="13004" name="entry.2143339229" value="トレーナー（社会人もしくは大学院生）"><label for="13004">トレーナー（社会人もしくは大学院生）</label></p>
 <p>　<input type="checkbox" id="13005" name="entry.2143339229" value="コーチングスタッフ（例：監督、コーチ）（社会人もしくは大学院生）"><label for="13005">コーチングスタッフ（例：監督、コーチ）（社会人もしくは大学院生）</label></p>
-<p>　<input type="checkbox" id="1300s" name="entry.2143339229" onchange="checkClear(this)" value="（その他）"><label for="1300s">その他（具体的に記入：<input type="text" id="1300st" name="entry.2143339229" onclick="gCheck(this);checkClear(this)">）</label></p>
-<p>　<input type="checkbox" id="1300w" name="entry.2143339229" onchange="checkClear(this)" value="（わからない）"><label for="1300w">わからない（具体的に記入：<input type="text" id="1300wt" name="entry.2143339229" onclick="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="1300s" name="entry.2143339229" onchange="checkClear(this)" value="（その他）"><label for="1300s">その他（具体的に記入：<input type="text" id="1300st" name="entry.2143339229" onblur="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="1300w" name="entry.2143339229" onchange="checkClear(this)" value="（わからない）"><label for="1300w">わからない（具体的に記入：<input type="text" id="1300wt" name="entry.2143339229" onblur="gCheck(this);checkClear(this)">）</label></p>
 </span>
 
 <p><b>14．あなたのチームでは、<u>練習中</u>に発生するケガを記録していますか。</b></p>
 <p>　<input type="radio" id="14001" name="entry.1127244046" onchange="YesNo(this);tClear(this)" value="はい" required><label for="14001">はい</label></p>
 <p>　<input type="radio" id="14002" name="entry.1127244046" onchange="YesNo(this);tClear(this)" value="いいえ"><label for="14002">いいえ</label></p>
-<p>　<input type="radio" id="1400w" name="entry.1127244046" onchange="YesNo(this);tClear(this)" value="（わからない）"><label for="1400w">わからない（具体的に記入：<input type="text" id="1400wt" name="entry.1127244046" onclick="gCheck(this);tClear(this)">）</label></p>
+<p>　<input type="radio" id="1400w" name="entry.1127244046" onchange="YesNo(this);tClear(this)" value="（わからない）"><label for="1400w">わからない（具体的に記入：<input type="text" id="1400wt" name="entry.1127244046" onblur="gCheck(this);tClear(this)">）</label></p>
 
 <span id="1400no">
 <!--質問14で「いいえ」と回答した場合-->
 <p><b>15．あなたのチームは今後、<u>練習中</u>に発生するケガを記録することを考えていますか。</u></b></p>
 <p>　<input type="radio" id="15001" name="entry.1307366704" onchange="tClear(this)" value="はい" required><label for="15001">はい</label></p>
 <p>　<input type="radio" id="15002" name="entry.1307366704" onchange="tClear(this)" value="いいえ"><label for="15002">いいえ</label></p>
-<p>　<input type="radio" id="1500w" name="entry.1307366704" onchange="tClear(this)" value="（わからない）"><label for="1500w">わからない（具体的に記入：<input type="text" id="1500wt" name="entry.1307366704" onclick="gCheck(this);tClear(this)">）</label></p>
+<p>　<input type="radio" id="1500w" name="entry.1307366704" onchange="tClear(this)" value="（わからない）"><label for="1500w">わからない（具体的に記入：<input type="text" id="1500wt" name="entry.1307366704" onblur="gCheck(this);tClear(this)">）</label></p>
 </span>
 
 <span id="1400yes">
@@ -214,8 +214,8 @@
 <p>　<input type="checkbox" id="16003" name="entry.364753067" value="医師（社会人もしくは大学院生）"><label for="16003">医師（社会人もしくは大学院生）</label></p>
 <p>　<input type="checkbox" id="16004" name="entry.364753067" value="トレーナー（社会人もしくは大学院生）"><label for="16004">トレーナー（社会人もしくは大学院生）</label></p>
 <p>　<input type="checkbox" id="16005" name="entry.364753067" value="コーチングスタッフ（例：監督、コーチ）（社会人もしくは大学院生）"><label for="16005">コーチングスタッフ（例：監督、コーチ）（社会人もしくは大学院生）</label></p>
-<p>　<input type="checkbox" id="1600s" name="entry.364753067" onchange="checkClear(this)" value="（その他）"><label for="1600s">その他（具体的に記入：<input type="text" id="1600st" name="entry.364753067" onclick="gCheck(this);checkClear(this)">）</label></p>
-<p>　<input type="checkbox" id="1600w" name="entry.364753067" onchange="checkClear(this)" value="（わからない）"><label for="1600w">わからない（具体的に記入：<input type="text" id="1600wt" name="entry.364753067" onclick="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="1600s" name="entry.364753067" onchange="checkClear(this)" value="（その他）"><label for="1600s">その他（具体的に記入：<input type="text" id="1600st" name="entry.364753067" onblur="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="1600w" name="entry.364753067" onchange="checkClear(this)" value="（わからない）"><label for="1600w">わからない（具体的に記入：<input type="text" id="1600wt" name="entry.364753067" onblur="gCheck(this);checkClear(this)">）</label></p>
 
 <!--質問14で「はい」と回答した場合-->
 <p><b>17．記録した<u>練習中</u>のケガの情報をどのぐらいの頻度でまとめていますか。</b></p>
@@ -225,7 +225,7 @@
 <p>　<input type="radio" id="17003" name="entry.1567367990" onchange="tClear(this)" value="月ごと"><label for="17003">月ごと</label></p>
 <p>　<input type="radio" id="17004" name="entry.1567367990" onchange="tClear(this)" value="年（または1シーズン）ごと"><label for="17004">年（または1シーズン）ごと</label></p>
 <p>　<input type="radio" id="17005" name="entry.1567367990" onchange="tClear(this)" value="不定期"><label for="17005">不定期</label></p>
-<p>　<input type="radio" id="1700s" name="entry.1567367990" onchange="tClear(this)" value="（その他）"><label for="1700s">その他（具体的に記入：<input type="text" id="1700st" name="entry.1567367990" onclick="gCheck(this);tClear(this)">）</label></p>
+<p>　<input type="radio" id="1700s" name="entry.1567367990" onchange="tClear(this)" value="（その他）"><label for="1700s">その他（具体的に記入：<input type="text" id="1700st" name="entry.1567367990" onblur="gCheck(this);tClear(this)">）</label></p>
 
 <!--質問14で「はい」と回答した場合-->
 <p><b>18．誰が<u>練習中</u>に発生したケガの情報をまとめていますか。</b></p>
@@ -236,14 +236,14 @@
 <p>　<input type="checkbox" id="18003" name="entry.36840026" value="医師（社会人もしくは大学院生）"><label for="18003">医師（社会人もしくは大学院生）</label></p>
 <p>　<input type="checkbox" id="18004" name="entry.36840026" value="トレーナー（社会人もしくは大学院生）"><label for="18004">トレーナー（社会人もしくは大学院生）</label></p>
 <p>　<input type="checkbox" id="18005" name="entry.36840026" value="コーチングスタッフ（例：監督、コーチ）（社会人もしくは大学院生）"><label for="18005">コーチングスタッフ（例：監督、コーチ）（社会人もしくは大学院生）</label></p>
-<p>　<input type="checkbox" id="1800s" name="entry.36840026" onchange="checkClear(this)" value="（その他）"><label for="1800s">その他（具体的に記入：<input type="text" id="1800st" name="entry.36840026" onclick="gCheck(this);checkClear(this)">）</label></p>
-<p>　<input type="checkbox" id="1800w" name="entry.36840026" onchange="checkClear(this)" value="（わからない）"><label for="1800w">わからない（具体的に記入：<input type="text" id="1800wt" name="entry.36840026" onclick="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="1800s" name="entry.36840026" onchange="checkClear(this)" value="（その他）"><label for="1800s">その他（具体的に記入：<input type="text" id="1800st" name="entry.36840026" onblur="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="1800w" name="entry.36840026" onchange="checkClear(this)" value="（わからない）"><label for="1800w">わからない（具体的に記入：<input type="text" id="1800wt" name="entry.36840026" onblur="gCheck(this);checkClear(this)">）</label></p>
 </span>
 
 <p><b>19．ケガが発生した場合、その状況を記入するためのケガの調査フォームを持っていますか。</b></p>
 <p>　<input type="radio" id="19001" name="entry.69604023" onchange="YesNo(this);tClear(this)" value="はい" required><label for="19001">はい</label></p>
 <p>　<input type="radio" id="19002" name="entry.69604023" onchange="YesNo(this);tClear(this)" value="いいえ"><label for="19002">いいえ</label></p>
-<p>　<input type="radio" id="1900w" name="entry.69604023" onchange="YesNo(this);tClear(this)" value="（わからない）"><label for="1900w">わからない（具体的に記入：<input type="text" id="1900wt" name="entry.69604023" onclick="gCheck(this);tClear(this)">）</label></p>
+<p>　<input type="radio" id="1900w" name="entry.69604023" onchange="YesNo(this);tClear(this)" value="（わからない）"><label for="1900w">わからない（具体的に記入：<input type="text" id="1900wt" name="entry.69604023" onblur="gCheck(this);tClear(this)">）</label></p>
 
 <span id="1900no">
 </span>
@@ -254,8 +254,8 @@
 <p>　※当てはまるもの全てを選択してください。</p>
 <p>　<input type="checkbox" id="20001" name="entry.1140198498" value="電子媒体（例：アプリケーション、エクセル、Google フォーム）を使用して記録"><label for="20001">電子媒体（例：アプリケーション、エクセル、Google フォーム）を使用して記録</label></p>
 <p>　<input type="checkbox" id="20002" name="entry.1140198498" value="紙を使用して記録"><label for="20002">紙を使用して記録</label></p>
-<p>　<input type="checkbox" id="2000s" name="entry.1140198498" onchange="checkClear(this)" value="（その他）"><label for="2000s">その他（具体的に記入：<input type="text" id="2000st" name="entry.1140198498" onclick="gCheck(this);checkClear(this)">）</label></p>
-<p>　<input type="checkbox" id="2000w" name="entry.1140198498" onchange="checkClear(this)" value="（わからない）"><label for="2000w">わからない（具体的に記入：<input type="text" id="2000wt" name="entry.1140198498" onclick="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="2000s" name="entry.1140198498" onchange="checkClear(this)" value="（その他）"><label for="2000s">その他（具体的に記入：<input type="text" id="2000st" name="entry.1140198498" onblur="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="2000w" name="entry.1140198498" onchange="checkClear(this)" value="（わからない）"><label for="2000w">わからない（具体的に記入：<input type="text" id="2000wt" name="entry.1140198498" onblur="gCheck(this);checkClear(this)">）</label></p>
 
 <!--質問19で「はい」と回答した場合-->
 <p><b>21．ケガの調査フォームに含まれる情報はどれですか。</b></p>
@@ -287,7 +287,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2101w" name="entry.848158956" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2101wt" name="entry.848158956" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2101wt" name="entry.848158956" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -302,7 +302,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2102w" name="entry.1450093137" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2102wt" name="entry.1450093137" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2102wt" name="entry.1450093137" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -317,7 +317,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2103w" name="entry.2109641383" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2103wt" name="entry.2109641383" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2103wt" name="entry.2109641383" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -332,7 +332,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2104w" name="entry.143211267" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2104wt" name="entry.143211267" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2104wt" name="entry.143211267" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -347,7 +347,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2105w" name="entry.161345526" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2105wt" name="entry.161345526" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2105wt" name="entry.161345526" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -362,7 +362,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2106w" name="entry.610234784" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2106wt" name="entry.610234784" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2106wt" name="entry.610234784" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -377,7 +377,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2107w" name="entry.703959160" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2107wt" name="entry.703959160" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2107wt" name="entry.703959160" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -392,7 +392,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2108w" name="entry.225873728" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2108wt" name="entry.225873728" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2108wt" name="entry.225873728" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -407,7 +407,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2109w" name="entry.1052260797" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2109wt" name="entry.1052260797" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2109wt" name="entry.1052260797" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -422,7 +422,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2110w" name="entry.986771553" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2110wt" name="entry.986771553" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2110wt" name="entry.986771553" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -437,7 +437,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2111w" name="entry.992443041" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2111wt" name="entry.992443041" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2111wt" name="entry.992443041" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -452,7 +452,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2112w" name="entry.1435453234" onchange="tClear(this);YesNo(this)" value="（わからない）">
-            <input type="text" id="2112wt" name="entry.1435453234" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2112wt" name="entry.1435453234" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -467,7 +467,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2113w" name="entry.2025236233" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2113wt" name="entry.2025236233" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2113wt" name="entry.2025236233" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -482,7 +482,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2114w" name="entry.222011874" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2114wt" name="entry.222011874" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2114wt" name="entry.222011874" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -497,7 +497,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2115w" name="entry.1589964351" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2115wt" name="entry.1589964351" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2115wt" name="entry.1589964351" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -512,7 +512,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2116w" name="entry.822947387" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2116wt" name="entry.822947387" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2116wt" name="entry.822947387" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -527,7 +527,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2117w" name="entry.1828273273" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2117wt" name="entry.1828273273" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2117wt" name="entry.1828273273" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -542,7 +542,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2118w" name="entry.708614092" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2118wt" name="entry.708614092" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2118wt" name="entry.708614092" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
     <div class="row">
@@ -557,7 +557,7 @@
         </div>
         <div class="cellCw">
             <input type="radio" id="2119w" name="entry.504266363" onchange="tClear(this)" value="（わからない）">
-            <input type="text" id="2119wt" name="entry.504266363" onclick="gCheck(this);tClear(this)">
+            <input type="text" id="2119wt" name="entry.504266363" onblur="gCheck(this);tClear(this)">
         </div>
     </div>
 </div>
@@ -569,8 +569,8 @@
 <p>　<input type="checkbox" id="22002" name="entry.272757457" value="ケガを調査した先行研究を参考に決定"><label for="22002">ケガを調査した先行研究を参考に決定</label></p>
 <p>　<input type="checkbox" id="22003" name="entry.272757457" value="協会や競技団体の情報を参考に決定"><label for="22003">協会や競技団体の情報を参考に決定</label></p>
 <p>　<input type="checkbox" id="22004" name="entry.272757457" value="チーム独自の情報にて決定"><label for="22004">チーム独自の情報にて決定</label></p>
-<p>　<input type="checkbox" id="2200s" name="entry.272757457" onchange="checkClear(this)" value="（その他）"><label for="2200s">その他（具体的に記入：<input type="text" id="2200st" name="entry.272757457" onclick="gCheck(this);checkClear(this)">）</label></p>
-<p>　<input type="checkbox" id="2200w" name="entry.272757457" onchange="checkClear(this)" value="（わからない）"><label for="2200w">わからない（具体的に記入：<input type="text" id="2200wt" name="entry.272757457" onclick="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="2200s" name="entry.272757457" onchange="checkClear(this)" value="（その他）"><label for="2200s">その他（具体的に記入：<input type="text" id="2200st" name="entry.272757457" onblur="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="2200w" name="entry.272757457" onchange="checkClear(this)" value="（わからない）"><label for="2200w">わからない（具体的に記入：<input type="text" id="2200wt" name="entry.272757457" onblur="gCheck(this);checkClear(this)">）</label></p>
 
 <span id="2112no">
 </span>
@@ -585,7 +585,7 @@
 <p>　<input type="checkbox" id="23004" name="entry.1371248371" value="メディカルスタッフが必要とする治療の期間で評価"><label for="23004">メディカルスタッフが必要とする治療の期間で評価</label></p>
 <p>　<input type="checkbox" id="23005" name="entry.1371248371" value="保険請求額や該当するグレードに基づく評価"><label for="23005">保険請求額や該当するグレードに基づく評価</label></p>
 <p>　<input type="checkbox" id="23006" name="entry.1371248371" value="競技からの引退の原因となるケガであるかどうかに基づく評価"><label for="23006">競技からの引退の原因となるケガであるかどうかに基づく評価</label></p>
-<p>　<input type="checkbox" id="2300s" name="entry.1371248371" onchange="checkClear(this)" value="（その他）"><label for="2300s">その他（具体的に記入：<input type="text" id="2300st" name="entry.1371248371" onclick="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="2300s" name="entry.1371248371" onchange="checkClear(this)" value="（その他）"><label for="2300s">その他（具体的に記入：<input type="text" id="2300st" name="entry.1371248371" onblur="gCheck(this);checkClear(this)">）</label></p>
 </span>
 </span>
 
@@ -596,21 +596,21 @@
 <p>　<input type="checkbox" id="24003" name="entry.321943382" value="練習や試合に参加できたか、またはメディカルスタッフへ医学的な評価や処置を求めたかどうかに関係なく、選手が痛みや腫れなどの不調を感じた場合（any complaintに該当）"><label for="24003">練習や試合に参加できたか、またはメディカルスタッフへ医学的な評価や処置を求めたかどうかに関係なく、選手が痛みや腫れなどの不調を感じた場合（any complaintに該当）</label></p>
 <p>　<input type="checkbox" id="24004" name="entry.321943382" value="選手が保険の請求を行った場合"><label for="24004">選手が保険の請求を行った場合</label></p>
 <p>　<input type="checkbox" id="24005" name="entry.321943382" value="ケガは定義していない"><label for="24005">ケガは定義していない</label></p>
-<p>　<input type="checkbox" id="2400s" name="entry.321943382" onchange="checkClear(this)" value="（その他）"><label for="2400s">その他（具体的に記入：<input type="text" id="2400st" name="entry.321943382" onclick="gCheck(this);checkClear(this)">）</label></p>
+<p>　<input type="checkbox" id="2400s" name="entry.321943382" onchange="checkClear(this)" value="（その他）"><label for="2400s">その他（具体的に記入：<input type="text" id="2400st" name="entry.321943382" onblur="gCheck(this);checkClear(this)">）</label></p>
 
 
 <p><b>25．あなたのチームでは、<u>試合中</u>の曝露を記録していますか。</b></p>
 <p>　※曝露とは、選手がケガを受傷するリスクにさらされている時間（例：プレー時間）や移動距離、または特定の事象（例：タックル、投球、ジャンプ）の回数として測定されます。</p>
 <p>　<input type="radio" id="25001" name="entry.2010555395" onchange="tClear(this)" value="はい" required><label for="25001">はい</label></p>
 <p>　<input type="radio" id="25002" name="entry.2010555395" onchange="tClear(this)" value="いいえ"><label for="25002">いいえ</label></p>
-<p>　<input type="radio" id="2500w" name="entry.2010555395" onchange="tClear(this)" value="（わからない）"><label for="2500w">わからない（具体的に記入：<input type="text" id="2500wt" name="entry.2010555395" onclick="gCheck(this);tClear(this)">）</label></p>
+<p>　<input type="radio" id="2500w" name="entry.2010555395" onchange="tClear(this)" value="（わからない）"><label for="2500w">わからない（具体的に記入：<input type="text" id="2500wt" name="entry.2010555395" onblur="gCheck(this);tClear(this)">）</label></p>
 
 
 <p><b>26．あなたのチームでは、<u>練習中</u>の曝露を記録していますか。</b></p>
 <p>　※曝露とは、選手がケガを受傷するリスクにさらされている時間（例：練習時間）や移動距離、または特定の事象（例：タックル、投球、ジャンプ）の回数として測定されます。</p>
 <p>　<input type="radio" id="26001" name="entry.1512369921" onchange="tClear(this)" value="はい" required><label for="26001">はい</label></p>
 <p>　<input type="radio" id="26002" name="entry.1512369921" onchange="tClear(this)" value="いいえ"><label for="26002">いいえ</label></p>
-<p>　<input type="radio" id="2600w" name="entry.1512369921" onchange="tClear(this)" value="（わからない）"><label for="2600w">わからない（具体的に記入：<input type="text" id="2600wt" name="entry.1512369921" onclick="gCheck(this);tClear(this)">）</label></p>
+<p>　<input type="radio" id="2600w" name="entry.1512369921" onchange="tClear(this)" value="（わからない）"><label for="2600w">わからない（具体的に記入：<input type="text" id="2600wt" name="entry.1512369921" onblur="gCheck(this);tClear(this)">）</label></p>
 
 
 <p><b>27．あなたのチームでは、ケガの情報を基に何らかの変更を実施したことがありますか。</b></p>
@@ -620,7 +620,7 @@
 <p>　<input type="radio" id="27003" name="entry.554681103" onchange="tClear(this)" value="いいえ、しかし今後チームのケガの情報を基に変更を実施する予定である。"><label for="27003">いいえ、しかし今後チームのケガの情報を基に変更を実施する予定である。</label></p>
 <p>　<input type="radio" id="27004" name="entry.554681103" onchange="tClear(this)" value="いいえ、しかし今後他チームまたは他団体のケガの情報を基に変更を実施する予定である。"><label for="27004">いいえ、しかし今後他チームまたは他団体のケガの情報を基に変更を実施する予定である。</label></p>
 <p>　<input type="radio" id="27005" name="entry.554681103" onchange="tClear(this)" value="いいえ、ケガの情報に基づく変更は行っていない。"><label for="27005">いいえ、ケガの情報に基づく変更は行っていない。</label></p>
-<p>　<input type="radio" id="2700w" name="entry.554681103" onchange="tClear(this)" value="（わからない）"><label for="2700w">わからない（具体的に記入：<input type="text" id="2700wt" name="entry.554681103" onclick="gCheck(this);tClear(this)">）</label></p>
+<p>　<input type="radio" id="2700w" name="entry.554681103" onchange="tClear(this)" value="（わからない）"><label for="2700w">わからない（具体的に記入：<input type="text" id="2700wt" name="entry.554681103" onblur="gCheck(this);tClear(this)">）</label></p>
 
 
 <p><b>28．ケガの情報を記録および活用する上で起こりうる阻害要因について、あなたのチームに当てはまるかどうかを、「まったくあてはまらない」、「あまりあてはまらない」、「どちらともいえない」、「ややあてはまる」、「とてもあてはまる」から選択してください。</b></p>

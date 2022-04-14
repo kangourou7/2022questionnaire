@@ -172,22 +172,18 @@ function YesNo(ele){
 
     var yesQs = document.getElementById(yesQsId);
     var noQs = document.getElementById(noQsId);
-    //alert(yesQs)
     if(yesBtn == true){
-        //alert("yes")
         yesQs.style.display = "block";
         noQs.style.display = "none";
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
             for(j=0;j<target.length;j++){
-                target[j].checked = false;
-                target[j].value = "";
+                //target[j].checked = false;
                 target[j].required = true;
             }
             var targetC = document.getElementsByName(yesQsNameC[i])
             for(j=0;j<targetC.length;j++){
-                targetC[j].checked = false;
-                targetC[j].value = "";
+                //targetC[j].checked = false;
             }
         }
         for(i=0;i<noQsName.length;i++){
@@ -195,35 +191,38 @@ function YesNo(ele){
             //target.required = false;
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
-                target[j].value = "";
                 target[j].required = false;
+                if(target[j].id.charAt(5) == "t"){
+                    target[j].value = "";
+                }
             }
         }
     }
     else if(noBtn == true){
-        //alert("no")
         yesQs.style.display = "none";
         noQs.style.display = "block";
-        //alert("aaa")
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
-                target[j].value = "";
                 target[j].required = false;
+                if(target[j].id.charAt(5) == "t"){
+                    target[j].value = "";
+                }
             }
             var targetC = document.getElementsByName(yesQsNameC[i])
             for(j=0;j<targetC.length;j++){
                 targetC[j].checked = false;
-                targetC[j].value = "";
+                if(targetC[j].id.charAt(5) == "t"){
+                    targetC[j].value = "";
+                }
             }
         }
         for(i=0;i<noQsName.length;i++){
             var target = document.getElementsByName(noQsName[i])
             //target.required = true;
             for(j=0;j<target.length;j++){
-                target[j].checked = false;
-                target[j].value = "";
+                //target[j].checked = false;
                 target[j].required = true;
             }
         }
@@ -232,27 +231,33 @@ function YesNo(ele){
         //alert("wakaran")
         yesQs.style.display = "none";
         noQs.style.display = "none";
-        yesQs.checked = false;
-        noQs.checked = false;
+        //yesQs.checked = false;
+        //noQs.checked = false;
         for(i=0;i<noQsName.length;i++){
             var target = document.getElementsByName(noQsName[i])
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
-                target[j].value = "";
                 target[j].required = false;
+                if(target[j].id.charAt(5) == "t"){
+                    target[j].value = "";
+                }
             }
         }
         for(i=0;i<yesQsName.length;i++){
             var target = document.getElementsByName(yesQsName[i])
             for(j=0;j<target.length;j++){
                 target[j].checked = false;
-                target[j].value = "";
                 target[j].required = false;
+                if(target[j].id.charAt(5) == "t"){
+                    target[j].value = "";
+                }
             }
             var targetC = document.getElementsByName(yesQsNameC[i])
             for(j=0;j<targetC.length;j++){
                 targetC[j].checked = false;
-                targetC[j].value = "";
+                if(targetC[j].id.charAt(5) == "t"){
+                    targetC[j].value = "";
+                }
             }
         }
     }
@@ -343,7 +348,11 @@ function tClear(ele){
 function gCheck(ele){
     var checkedId = ele.id;
     var gId = checkedId.charAt(0) + checkedId.charAt(1) + checkedId.charAt(2) + checkedId.charAt(3) + checkedId.charAt(4);
-    document.getElementById(gId).checked = true
+    if(document.getElementById(checkedId).value != ""){
+        document.getElementById(gId).checked = true;
+    }else if(document.getElementById(checkedId).value == ""){
+        document.getElementById(gId).checked = false;
+    }
 }
 
 
@@ -473,7 +482,7 @@ function numChk04(){
     //var inputValue1st = inputValue.charAt(0);
     var inputNum = inputValue * 1;
     if(Number.isInteger(inputNum) == false || inputNum < 1){
-        alert("正の整数以外は入力できません。");
+        alert("正の整数（半角）以外は入力できません。");
         document.getElementById("04001").value = "";
         document.getElementById("04001").focus();
         return;
@@ -487,7 +496,7 @@ function numChk06(ele){
     var inputValue = document.getElementById("06001").value;
     var inputNum = inputValue * 1;
     if(isNaN(inputNum) || inputNum < 0){
-        alert("正の数以外は入力できません。");
+        alert("正の数（半角）以外は入力できません。");
         document.getElementById("06001").value = "";
         document.getElementById("06001").focus();
     }else{
@@ -557,3 +566,7 @@ function point_check(str){
 	return(ok);
 }
 */
+
+function idTest(ele){
+    alert(document.getElementById(ele.id).id);
+}
